@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Naloa Flooring</title>
+</head>
+<body>
+
+    <header>
+        <h1>Naloa Flooring</h1>
+        <img src="img/AdobeStock_638507468.jpeg" alt="Vinyl Flooring">
+       
+        <h2>About Us</h2>
+        <div class="text-overlay">Naloa Flooring stands out as a premier choice for vinyl, laminate, and hardwood flooring installations. Our commitment to superior craftsmanship, competitive pricing, and a diverse range of high-quality materials sets us apart. We specialize in creating timeless and elegant flooring solutions, making Naloa Flooring the top choice for homeowners and businesses seeking excellence in flooring aesthetics and installation expertise.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="floorcareproduct.html">Floor Care Product</a>
+                </li>
+                <li><a href="service.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <img src="img/first section pic.jpg" alt="Vinyl Flooring">
+        </div>
+        <div class="services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <a href="vinylgallery.html" target="_blank">
+                    <img src="img/33vinylfff.jpg" alt="Vinyl Flooring">
+                </a>
+                <h3><a href="vinylgallery.html">Vinyl Flooring Installation</a></h3>
+                <p>We specialize in professional vinyl flooring installations. Choose from a wide range of styles and patterns.</p>
+            </div>
+            <div class="service">
+                <a href="vinylgallery.html">
+                    <img src="img/2laminate-flooringffff.jpg" alt="Laminate Flooring">
+                </a>
+                <h3><a href="vinylgallery.html">Laminate Flooring Installation</a></h3>
+                <p>Transform your space with high-quality laminate flooring options. Durable and stylish solutions for any room.</p>
+            </div>
+            <div class="service">
+                <a href="vinylgallery.html">
+                    <img src="img/33hardwood.jpg" alt="Hardwood Flooring">
+                </a>
+                <h3><a href="vinylgallery.html">Hardwood Flooring Installation</a></h3>
+                <p>Experience the timeless beauty of hardwood flooring. Our experts ensure precise and elegant installations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="estimateSection">
+        <h2>Estimate Your Cost</h2>
+        <form id="estimatorForm">
+            <div class="form-group">
+                <label for="floorType">Select Flooring Type:</label>
+                <select id="floorType" name="floorType">
+                    <option value="vinyl">Vinyl Flooring</option>
+                    <option value="laminate">Laminate Flooring</option>
+                    <option value="hardwood">Hardwood Flooring</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="area">Enter Area (in square feet):</label>
+                <input type="number" id="area" name="area" required>
+            </div>
+    
+            <div class="form-group">
+                <button type="button" onclick="calculateEstimate()">Get Estimate</button>
+            </div>
+    
+            <div class="form-group">
+                <p id="estimatedCost"></p>
+            </div>
+        </form>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Ready to enhance your space with our flooring services? Contact us for a consultation!</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourfacebookpage" target="_blank"><img src="img/facebook icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com/FlooringNaloa/status/1749297906828431704" target="_blank"><img src="img/twitter icon.jpg" alt="Twitter"></a>
+            <a href="https://www.instagram.com/p/C2cgPuLrEWS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><img src="img/instagram icon.jpg" alt="Instagram"></a>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 Naloa Flooring. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

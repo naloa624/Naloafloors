@@ -1,0 +1,187 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-image: url('img/VG.vinyl gallary/11modern.jpg'); /* Replace with your parallax image URL */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Modern Google Font */
+    color: #6f804a; /* Green Color */
+    position: relative;
+    display: inline-block;
+}
+
+header h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #6f804a; /* Green underline color */
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure the navigation is above other elements */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #6f804a;
+}
+
+
+/* Common styles for all sections */
+section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px 0;
+    background-color: #ffffff; /* Green Background */
+    color: #ecf0f1; /* Light Gray Text */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+/* Image styles */
+section img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); /* Custom clip path for dynamic shape */
+}
+
+/* Heading styles */
+h2 {
+    font-family: 'Oswald', sans-serif; /* Google Font for a bold look */
+    font-size: 36px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+
+    /* Advanced text styling */
+    background: linear-gradient(to right, #4d832b, #609240); /* Gradient Text */
+    background-clip: text;
+    color: transparent;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text Shadow */
+    animation: textAnimation 1s infinite alternate; /* Subtle Animation */
+}
+
+/* Animation Keyframes */
+@keyframes textAnimation {
+    to {
+        transform: translateY(-2px);
+    }
+}
+
+/* Paragraph styles */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #6f804a; /* Light Gray Text */
+
+    /* Advanced text styling */
+    background: linear-gradient(to right, #6f804a, #6f804a); /* Gradient Text */
+    background-clip: text;
+    color: transparent;
+
+    /* Subtle box shadow */
+    box-shadow: 0 2px 4px #6f804a;
+
+    /* Hover effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+p:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Background overlay for a subtle effect */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 40, 40, 0.1);
+    z-index: -1;
+}
+
+/* Hover effect */
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    section {
+        margin: 20px 0;
+    }
+}
