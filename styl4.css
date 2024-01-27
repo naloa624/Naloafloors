@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url('img/VG.vinyl gallary/11modern.jpg'); /* Replace with your parallax image URL */
+    background-image: url('11modern.jpg'); /* Replace with your parallax image URL */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,8 +148,7 @@ p {
     background-clip: text;
     color: transparent;
 
-    /* Subtle box shadow */
-    box-shadow: 0 2px 4px #6f804a;
+  
 
     /* Hover effect */
     transition: transform 0.3s ease-in-out;
