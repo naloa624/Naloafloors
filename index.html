@@ -83,17 +83,26 @@
         <div class="contact-container">
             <h2>Contact Us</h2>
             <p>Ready to enhance your space with our flooring services? Contact us for a consultation!</p>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form action="submit_form.php" method="post" class="form">
+                <div class="form-group">
+                <label for="name" class="form-label">Your Name:</label>
+                <input type="text" class="form-control" id="name" 
+                name="" placeholder="john doe" tabindex="1" required>
+</div>
+                <div class="form-group">
+                <label for="email"class="form-label">Your email</label>
+                <input type="email" class="form-control" id="email"
+                 name="email" placeholder="john@doe.com" tabindex="2" required>
+</div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
+<div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" rows="5" cols="50" 
+                id="message" name="message" placeholder="Enter Message" tabindex="4"></textarea>
+</div>
+<div></div>
                 <button type="submit">Submit</button>
+            </div>
             </form>
         </div>
     </section>
