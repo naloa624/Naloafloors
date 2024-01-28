@@ -244,4 +244,7 @@ footer {
     margin: 0;
     padding: 0;
 }
+header h1:hover {
+    color: #6f804a;
 
+}

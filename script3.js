@@ -97,3 +97,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+function redirectToSelected() {
+    var select = document.getElementById("product-select");
+    var selectedValue = select.options[select.selectedIndex].value;
+
+    // Define URLs for each product
+    var product1URL = "C:\Users\User\OneDrive\Documents\GitHub\Naloafloors\floor cleaning.html";
+    var product2URL = "C:\Users\User\OneDrive\Documents\GitHub\Naloafloors\floor cleaning2.html";
+    var product3URL = "underlay.html";
+
+    // Redirect based on the selected option
+    switch (selectedValue) {
+        case "product1":
+            window.location.href = product1URL;
+            break;
+        case "product2":
+            window.location.href = product2URL;
+            break; 
+        
+        case "product3":
+            window.location.href = product3URL;
+            break;
+        default:
+            // Handle default case if needed
+            break;
+    }
+}
