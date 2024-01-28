@@ -15,6 +15,8 @@ body {
     background-position: center;
     height: 500vh;
     background-attachment: fixed;
+    height: 100vh; /* Set the height to 100vh to cover the entire viewport */
+    background-size: cover; 
 }
 
 /* Header Styles */
@@ -250,6 +252,12 @@ header h1:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    
+    body {
+        height: 100vh; /* Set the height to 100vh to cover the entire viewport */
+    background-size: cover; 
+    }
+    
     header {
         padding: 10px;
     }
