@@ -1,76 +1,55 @@
+html, body, h1, h2, h3, p, ul, li, figure, figcaption, blockquote, hr {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #f4f4f4;
     line-height: 1.6;
+    background-image: url('stockists-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; /* Adjusted height to 100vh */
+    background-attachment: fixed;
 }
 
+/* Header Styles */
 header {
-    background-image: url('11modern.jpg'); /* Replace with your parallax image URL */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    height: 400px; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    background-color: #333;
+    color: #fff;text-align: center;
+    padding: 20px;
+    margin: auto;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-family: 'Georgia', sans-serif;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif; /* Modern Google Font */
-    color: #6f804a; /* Green Color */
-    position: relative;
-    display: inline-block;
 }
 
-header h1::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #6f804a; /* Green underline color */
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-header h1:hover::before {
-    transform-origin: bottom left;
-    transform: scaleX(1);
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 130%;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    box-shadow:  2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Ensure the navigation is above other elements */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 20px;
+    margin-left: -20%;
+    font-weight: bold;
 }
 
 nav a {
@@ -84,102 +63,399 @@ nav a:hover {
     color: #6f804a;
 }
 
-
-/* Common styles for all sections */
+/* Section Styles */
 section {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px 0;
-    background-color: #ffffff; /* Green Background */
-    color: #ecf0f1; /* Light Gray Text */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 60px;
+    text-align: center;
+}
+
+section > div,
+.services {
+    flex-basis: 45%;
+}
+
+section img,
+.service img {
+    max-width: 30%;
+
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease-in-out; /* Added transition */
+}
+
+section img:hover,
+.service img:hover {
+    transform: scale(1.1); /* Scale on hover */
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #f8f8f8;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    
 }
 
-/* Image styles */
-section img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); /* Custom clip path for dynamic shape */
-}
-
-/* Heading styles */
-h2 {
-    font-family: 'Oswald', sans-serif; /* Google Font for a bold look */
-    font-size: 36px;
-    margin: 20px 0;
-    letter-spacing: 2px;
-
-    /* Advanced text styling */
-    background: linear-gradient(to right, #4d832b, #609240); /* Gradient Text */
-    background-clip: text;
-    color: transparent;
-    
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text Shadow */
-    animation: textAnimation 1s infinite alternate; /* Subtle Animation */
-}
-
-/* Animation Keyframes */
-@keyframes textAnimation {
-    to {
-        transform: translateY(-2px);
-    }
-}
-
-/* Paragraph styles */
-p {
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #6f804a; /* Light Gray Text */
-
-    /* Advanced text styling */
-    background: linear-gradient(to right, #6f804a, #6f804a); /* Gradient Text */
-    background-clip: text;
-    color: transparent;
-
-  
-
-    /* Hover effect */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect */
-p:hover {
+.service:hover {
     transform: scale(1.05);
 }
 
+.service a {
+    color: #6f8042;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #000000;
+}
+
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+}
+
+.service-info {
+    flex-basis: 45%;
+}
+
+.service-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333; /* Adjust the text color to your preference */
+}
+
+.service-info p {
+    font-size: 1.4em;
+    color: #666; /* Adjust the text color to your preference */
+    line-height: 1.6;
+}
 
 
-/* Background overlay for a subtle effect */
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input {
+    width: 90%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+button {
+    background-color: #6f804a;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #6f804a;
+}
+
+#estimatedCost {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1em;
+    color: #666;
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+#contact form input,
+#contact form textarea {
     width: 100%;
-    height: 100%;
-    background: rgba(41, 40, 40, 0.1);
-    z-index: -1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Hover effect */
-section:hover {
-    transform: scale(1.02);
+#contact form button {
+    background-color: #6f804a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
+#contact form button:hover {
+    background-color: #546e3f;
+}
+
+/* Social Media Section Styles */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+header h1:hover {
+    color: #6f804a;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
     section {
-        margin: 20px 0;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    section img,
+    .service img {
+        margin-bottom: 8px;
+    }
+
+    .service {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    
+
+    select,
+    input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #contact {
+        padding: 10px;
+    }
+
+    #contact-container {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
+.service:hover {
+    transform: scale(1.05);
+}
+.service a {  color: #6f8042;
+    margin-bottom: 10px;}
+    
+.service h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #666;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input {
+    width: 90%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+button {
+    background-color: #6f804a;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #6f804a;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;}
+    body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+header h1:hover {
+    color: #6f804a;
+
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    section img,
+    .service img {
+        margin-bottom: 8px;
+    }
+
+    .service {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #estimateSection {
+        padding: 30px;
+    }
+
+    #estimatorForm {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    select,
+    input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #contact {
+        padding: 10px;
+    }
+
+    #contact-container {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 5px;
     }
 }

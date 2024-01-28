@@ -128,6 +128,8 @@ nav {
     box-shadow:  2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Ensure the navigation is above other elements */
     margin-left: -20%;
+    font-weight: bold;
+    
 }
 
 nav ul {

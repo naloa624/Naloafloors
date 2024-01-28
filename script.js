@@ -8,13 +8,13 @@ function calculateEstimate() {
 
     switch (floorType) {
         case "vinyl":
-            costPerSquareFoot = 1.70; 
+            costPerSquareFoot = 1.64; 
             break;
         case "laminate":
-            costPerSquareFoot = 2.0; 
+            costPerSquareFoot = 2.04; 
             break;
         case "hardwood":
-            costPerSquareFoot = 4.0; 
+            costPerSquareFoot = 3.30; 
             break;
         default:
             costPerSquareFoot = 0;

@@ -30,6 +30,7 @@ nav a {
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1.2rem;
+ font-weight: bold;
 }
 
 nav a:hover {
