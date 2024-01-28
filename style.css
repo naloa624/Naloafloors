@@ -42,25 +42,17 @@ header img {
 }
 
 nav {
-    margin-top: 20px;
-}
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 20px;
 }
 
 nav a {
-    text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
 }
 
 nav a:hover {

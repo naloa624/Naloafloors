@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floor Cleaning Products</title>
     <link rel="stylesheet" href="style5.css">
+    <script src="https://js.stripe.com/v3/"></script>
+<script>
+  var stripe = Stripe('');
+</script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="floorcareproduct.html">Floor Care Product</a>
-            </li>
-            <li><a href="service.html">Services</a></li>
-        </ul>
-    </nav>
+    
     <header>
         <h1>Floor Cleaners</h1>
     </header>
-
-    <section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="floorcareproduct.html">Products</a>
+        <a href="service.html">services</a>
+        <a href="contact.html">Contact</a>
+    </nav> <section>
         <h2>Featured Products</h2>
+
+        <label for="product-select">Select Product:</label>
+<select id="product-select">
+    <option value="product1">Bona Hardwood Floor Cleaner, Cedar Wood Scent</option>
+    <option value="product2">Bona PowerPlus Antibacterial Hard-Surface Floor Cleaner</option>
+    <option value="product3">Bona Hard-Surface Floor Cleaner Refill</option>
+    <option value="product4">Bona Hardwood Floor Cleaner Refill, Cedar Wood Scent</option>
+
+</select>
+<div class="product-container">
         <div class="product-card">
             <div class="gallery gallery1">
                 <img src="flclean1.webp" alt="P">
@@ -34,7 +45,7 @@
             <h3>Bona Hardwood Floor Cleaner, Cedar Wood Scent</h3>
             <p>This Bona Hardwood Floor Cleaner features a long-lasting fresh Cedar Wood scent. Its easy-to-use, fast-drying formula cleans hardwood floors by gently and effectively removing dust, dirt and grime without leaving a dulling residue.</p>
             <p>Price: $11.48</p>
-            <button onclick="purchaseProduct('Bona Hardwood Floor Cleaner, Cedar Wood Scent')">Buy Now</button>
+            <button onclick="initiateStripePayment()">Buy Now</button>
         </div>
 
             <div class="product-card">
@@ -52,7 +63,7 @@
                 <h3>Bona PowerPlus Antibacterial Hard-Surface Floor Cleaner</h3>
                 <p>Bona PowerPlus® Antibacterial Hard-Surface Floor Cleaner kills 99.9% of household germs, when used as directed, with the power of hydrogen peroxide. Ready-to-use cleaner leaves your home smelling clean and fresh with no harsh chemical smell.</p>
                 <p>Price: $12.84</p>
-                <button onclick="purchaseProduct('Bona PowerPlus Antibacterial Hard-Surface Floor Cleaner')">Buy Now</button>
+                <button onclick="initiateStripePayment()">Buy Now</button>
             </div>
 
             <div class="product-card">
@@ -70,7 +81,7 @@
                 <h3>Bona Hard-Surface Floor Cleaner Refill</h3>
                 <p>Refills your empty cartridge or spray bottle with ready-to-use Hard-Surface Floor Cleaner. Splashless technology & wide handle give extra control & a smooth pour. The residue-free solution removes dirt & grime to reveal the floor's natural beauty.</p>
                 <p>Price: $24.99</p>
-                <button onclick="purchaseProduct('Bona Hard-Surface Floor Cleaner Refill')">Buy Now</button>
+                <button onclick="initiateStripePayment()">Buy Now</button>
             </div>
             <div class="product-card">
                 <div class="gallery gallery4">
@@ -88,8 +99,9 @@
                 <h3>Bona Hardwood Floor Cleaner Refill, Cedar Wood Scent</h3>
                 <p>This Bona Hardwood Floor Cleaner features a long-lasting fresh Cedar Wood scent. Its easy-to-use, fast-drying formula cleans hardwood floors by gently and effectively removing dust, dirt and grime without leaving a dulling residue. The refill fills your empty Bona cartridge or spray bottle with ready-to-use Bona Hardwood Floor Cleaner with Cedar Wood.</p>
                 <p>Price: $23.97</p>
-                <button onclick="purchaseProduct('Bona Hardwood Floor Cleaner Refill, Cedar Wood Scent')">Buy Now</button>
+                <button onclick="initiateStripePayment()">Buy Now</button>
             </div>
+</div>
             
         </div>
     </section>

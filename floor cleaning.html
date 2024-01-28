@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floor Cleaning Products</title>
     <link rel="stylesheet" href="style5.css">
-</head>
+    <script src="https://js.stripe.com/v3/"></script>
+<script> 
+var stripe = Stripe('');
+</script>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="floorcareproduct.html">Floor Care Product</a>
-            </li>
-            <li><a href="service.html">Services</a></li>
-        </ul>
-    </nav>
+    
     <header>
         <h1>Floor Cleaning Products</h1>
     </header>
-
-    <section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="floorcareproduct.html">Products</a>
+        <a href="service.html">services</a>
+        <a href="contact.html">Contact</a>
+    </nav> <section>
         <h2>Featured Products</h2>
+
+        <label for="product-select">Select Product:</label>
+        <select id="product-select">
+            <option value="product1">Bona Hardwood Floor Cleaner, Cedar Wood Scent</option>
+            <option value="product2">Bona PowerPlus Antibacterial Hard-Surface Floor Cleaner</option>
+            <option value="product3">Bona Hard-Surface Floor Cleaner Refill</option>
+            <option value="product4">Bona Hardwood Floor Cleaner Refill, Cedar Wood Scent</option>
+        </select>
+<div class="product-container">
         <div class="product-card">
             <div class="gallery gallery1">
                 <img src="spray-mop-bona.webp" alt="P">
@@ -36,7 +45,7 @@
             <h3>Bona Premium Spray Mop for Hardwood Floors</h3>
             <p>The Bona Premium Spray Mop makes cleaning your hardwood floors effortless. Featuring a durable, lightweight design, extra-large mop head, residue-free Bona Hardwood Floor Cleaner in a refillable cartridge, and the washable Bona Microfiber Cleaning Pad.</p>
             <p>Price: $48.69</p>
-            <button onclick="purchaseProduct('Bona Premium Spray Mop for Hardwood Floors')">Buy Now</button>
+            <button onclick="initiateStripePayment()">Buy Now</button>
         </div>
 
         <div class="product-card">
@@ -55,7 +64,7 @@
             <h3>Bona Pet System Microfiber Mop</h3>
             <p>The Bona Pet System Premium Microfiber Mop is the ultimate floor cleaning tool for homes with pets. This lightweight and durable mop comes with two Microfiber Pads each designed to target pet mess clean-up. Love your floors with Bona. Sustainable solutions for a cleaner and healthier home.</p>
             <p>Price: $29.99</p>
-            <button onclick="purchaseProduct('Bona Pet System Microfiber Mop')">Buy Now</button>
+            <button onclick="initiateStripePayment()">Buy Now</button>
         </div>
 
             <div class="product-card">
@@ -73,9 +82,8 @@
                 <h3>Bona Microfiber Cleaning Pads for use with Swiffer® WETJET® Spray Mop</h3>
                 <p>Bona's Microfiber Cleaning Pads are machine washable up to 500 times, keeping disposable pad waste from landfills. Bona Microfiber Cleaning Pads are reusable, saving you up to $100 per year in disposable pad purchases! These patented microfiber pads feature dual zone cleaning action.</p>
                 <p>Price: $24.92</p>
-                <button onclick="purchaseProduct('Bona Microfiber Cleaning Pads for use with Swiffer® WETJET® Spray Mop')">Buy Now</button>
+                <button onclick="initiateStripePayment()">Buy Now</button>
             </div>
-        </div>
 
         <div class="product-card">
             <div class="gallery gallery2">
@@ -92,9 +100,10 @@
             <h3>Bona Microfiber Dusting Pad</h3>
             <p>The Bona Microfiber Dusting Pad reaches wherever dust settles. Attract & lock away dust, hair, micro-particles & household allergens from your floors' surface. Washable up to 500 times. Use with the Bona Family of Mops on hardwood & hard-surface floors.</p>
             <p>Price: $13.24</p>
-            <button onclick="purchaseProduct('Bona Microfiber Dusting Pad')">Buy Now</button>
+            <button onclick="initiateStripePayment()">Buy Now</button>
         </div>
         
+    </div>
             
         </div>
     </section>
